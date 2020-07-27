@@ -10,10 +10,11 @@ class App extends Component {
   
   return (
     <div className="App">
-      <div className="container">
-        <h1 className="display-4">Twinkle Cats</h1>
-       
-        <Title />
+      <div className="container py-5">
+        <div className="row">
+          <div className="col-sm-8 offset-sm-2"></div>
+          <Title />
+        </div>
 
       </div>
     </div>
