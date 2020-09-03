@@ -11,6 +11,23 @@ class Controller extends Component{
             reset: false
         }
     }
+    startHandler(){
+        this.setState({
+            ...this.state,
+            start:false,
+            pause:true,
+            lap: true
+        })
+    }
+
+
+    pauseHandler(){
+
+    }
+
+    lapHandler(){
+
+    }
 
     getController(){
         let output =null
@@ -18,11 +35,32 @@ class Controller extends Component{
         if(this.state.start && !this.state.reset){
             output= (
                 <div>
-                    <button className="btn btn-success btn-lg px-5">Start</button>
+                    <button className="btn btn-success btn-lg px-5"
+                    onClick={event=> this.startHandler()}
+                    >Start
+                    </button>
                 </div>
             
             )
+        } else if(this.state.pause && this.state.lap){
+
+            output= (
+            <div>
+                    <button className="btn btn-primary btn-lg px-5"
+                    onClick={event=> this.pauseHandler()}
+                    >Pause
+                    </button>
+
+                    
+                    <button className="btn btn-warning btn-lg px-5"
+                    onClick={event=> this.lapHandler()}
+                    >Lap
+                    </button>
+            </div>)
+
         }
+
+
         return output
     }
 

@@ -28,7 +28,7 @@ class App extends Component {
         <div className="row">
           <div className="col-sm-8 offset-sm-2">
           <Title />
-          <CountDown  time={ this.state.time }/>
+          <CountDown  time={ this.state.time }/> 
           <Controller />
         </div>
         </div>
